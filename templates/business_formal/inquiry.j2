@@ -1,0 +1,23 @@
+---
+description: "Business inquiry email template"
+subject_template: "Inquiry: {{ subject }}"
+variables: ["subject", "recipient_name", "sender_name", "sender_role", "sender_company", "inquiry_purpose", "context", "call_to_action", "contact_info"]
+tags: ["inquiry", "formal", "business"]
+---
+
+Dear {{ recipient_name }},
+
+I hope this email finds you well. My name is {{ sender_name }}{% if sender_role is defined and sender_role and sender_role|trim %} and I am {{ sender_role }}{% endif %}{% if sender_company is defined and sender_company and sender_company|trim %} at {{ sender_company }}{% endif %}.
+
+I am writing to {{ inquiry_purpose }}{% if context %}. {{ context }}{% endif %}
+
+{% if call_to_action %}{{ call_to_action }}
+
+{% endif %}Thank you for your time and consideration. I look forward to hearing from you.
+
+Best regards,
+
+{{ sender_name }}
+{% if sender_role is defined and sender_role and sender_role|trim %}{{ sender_role }}{% endif %}
+{% if sender_company is defined and sender_company and sender_company|trim %}{{ sender_company }}{% endif %}
+{% if contact_info is defined and contact_info and contact_info|trim %}{{ contact_info }}{% endif %}

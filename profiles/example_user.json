@@ -1,0 +1,44 @@
+{
+    "user_id": "example_user",
+    "email_address": "user@example.com",
+    "created_at": "2026-01-31T08:30:00.000000",
+    "updated_at": "2026-01-31T08:30:00.000000",
+    "style_metrics": {
+        "formality_score": 0.6,
+        "sentence_complexity": 0.5,
+        "vocabulary_sophistication": 0.5,
+        "sentiment_tendency": 0.0,
+        "directness_score": 0.6,
+        "avg_sentence_length": 15.0,
+        "avg_word_length": 4.5,
+        "exclamation_frequency": 0.1,
+        "question_frequency": 0.2,
+        "greeting_patterns": [
+            "Hi",
+            "Hello",
+            "Dear"
+        ],
+        "signature_patterns": [
+            "Best regards,",
+            "Thanks,",
+            "Sincerely,"
+        ],
+        "common_phrases": [
+            "Best,",
+            "Regards,"
+        ]
+    },
+    "preferences": {
+        "sender_role": "an Engineer",
+        "sender_company": "Example Corp",
+        "default_tone": "professional",
+        "template_preferences": {
+            "business": "business_formal_standard",
+            "casual": "casual_friendly",
+            "sales": "sales_persuasive"
+        }
+    },
+    "analyzed_emails": 0,
+    "last_analysis": null,
+    "confidence_score": 0.0
+}

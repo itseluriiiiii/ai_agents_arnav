@@ -1,0 +1,29 @@
+---
+description: "Persuasive sales email template"
+subject_template: "{{ subject }}"
+variables: ["subject", "recipient_name", "hook", "sender_name", "company_name", "target_audience", "key_benefit", "problem_statement", "benefits", "call_to_action", "meeting_duration", "specific_outcome", "sender_title", "contact_info"]
+tags: ["sales", "persuasive", "business"]
+---
+
+Dear {{ recipient_name }},
+
+{{ hook }}
+
+I'm {{ sender_name }} from {{ company_name }}, and I help {{ target_audience }} achieve {{ key_benefit }}.
+
+{% if problem_statement %}{{ problem_statement }}
+
+{% endif %}Our solution helps you:
+{% if benefits %}{% for benefit in benefits %}• {{ benefit }}
+{% endfor %}{% endif %}
+
+{% if call_to_action %}{{ call_to_action }}
+
+{% endif %}Would you be open to a brief {{ meeting_duration }}-minute call next week to discuss how we can help you {{ specific_outcome }}?
+
+Best regards,
+
+{{ sender_name }}
+{{ sender_title }}
+{{ company_name }}
+{% if contact_info %}{{ contact_info }}{% endif %}

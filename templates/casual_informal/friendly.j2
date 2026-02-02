@@ -1,0 +1,18 @@
+---
+description: "Friendly casual email template"
+subject_template: "{{ subject }}"
+variables: ["subject", "greeting", "recipient_name", "opening", "context", "call_to_action", "signature"]
+tags: ["casual", "friendly", "informal"]
+---
+
+{% if greeting %}{{ greeting }} {{ recipient_name }},{% endif %}
+
+{{ opening }}
+
+{% if context %}{{ context }}
+
+{% endif %}{% if call_to_action %}{{ call_to_action }}
+
+{% endif %}Talk soon,
+
+{{ signature }}

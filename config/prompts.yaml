@@ -1,0 +1,120 @@
+# Prompt Templates for AI Email Generation
+
+email_generation: |
+  You are an expert email writer. Generate a professional email based on the following information:
+
+  CONTEXT: {context}
+  RECIPIENT: {recipient}
+  TOPIC: {topic}
+  INTENT: {intent}
+  WRITING STYLE: {style_profile}
+
+  Requirements:
+  - Match the specified writing style exactly
+  - Be appropriate for the stated intent
+  - Include all relevant context naturally
+  - Follow professional email etiquette
+  - Write in a clear, concise manner
+  - Use appropriate tone and formality level
+
+  Generate the complete email below:
+
+style_analysis: |
+  Analyze this email for writing style characteristics:
+
+  EMAIL CONTENT:
+  {email_content}
+
+  Please extract and rate the following characteristics (0-1 scale):
+  1. Formality level (0=very casual, 1=very formal)
+  2. Sentence complexity (0=simple, 1=complex)
+  3. Vocabulary sophistication (0=basic, 1=advanced)
+  4. Emotional tone (negative=0, neutral=0.5, positive=1)
+  5. Greeting patterns (identify patterns)
+  6. Signature patterns (identify patterns)
+  7. Common phrases used
+
+  Also identify:
+  - Average sentence length
+  - Tendency for direct vs indirect communication
+  - Use of bullet points or structured formatting
+
+  Respond in JSON format with numeric scores and descriptive patterns:
+
+intent_classification: |
+  Classify the user's intent for this email request:
+
+  REQUEST: {user_request}
+  CONTEXT: {context}
+  RECIPIENT: {recipient}
+
+  Classify the intent into one of these categories:
+  - information_request: Asking for information or clarification
+  - action_required: Requesting action or response
+  - follow_up: Following up on previous communication
+  - introduction: Introducing something or someone
+  - apology: Apologizing or addressing issues
+  - thank_you: Expressing gratitude
+  - sales_pitch: Promotional or sales related
+  - announcement: Making announcements
+  - inquiry: General inquiry or question
+  - other: Other specific intent
+
+  Also provide:
+  1. Urgency level (low/medium/high/urgent)
+  2. Formality level (casual/professional/formal)
+  3. Recommended email type (business/casual/sales)
+  4. Confidence score (0-1)
+
+  Respond in JSON format:
+
+subject_generation: |
+  Generate an appropriate email subject line for:
+
+  TOPIC: {topic}
+  INTENT: {intent}
+  RECIPIENT: {recipient}
+  URGENCY: {urgency}
+  FORMALITY: {formality}
+
+  Requirements:
+  - Be clear and descriptive
+  - Match the formality level
+  - Reflect the urgency if high
+  - Include keywords for searchability
+  - Keep under 50 characters if possible
+
+  Respond with just the subject line:
+
+opening_generation: |
+  Generate an appropriate email opening for:
+
+  TOPIC: {topic}
+  INTENT: {intent}
+  RECIPIENT: {recipient}
+  CONTEXT: {context}
+  FORMALITY: {formality}
+
+  Requirements:
+  - Set the right tone
+  - Be contextually appropriate
+  - Lead into the main topic naturally
+  - Match the formality level
+
+  Generate 2-3 sentences:
+
+closing_generation: |
+  Generate an appropriate email closing for:
+
+  TOPIC: {topic}
+  INTENT: {intent}
+  FORMALITY: {formality}
+  CALL_TO_ACTION: {call_to_action}
+
+  Requirements:
+  - Match the formality level
+  - Provide clear next steps if needed
+  - Include appropriate sign-off
+  - End on a positive note
+
+  Generate 1-2 sentences plus sign-off:

@@ -1,0 +1,18 @@
+---
+description: "Casual check-in email template"
+subject_template: "Checking in: {{ subject }}"
+variables: ["subject", "recipient_name", "context", "question", "sender_name"]
+tags: ["check-in", "casual", "follow-up"]
+---
+
+Hi {{ recipient_name }},
+
+Just wanted to check in and see how things are going{% if context %} regarding {{ context }}{% endif %}.
+
+{% if question %}{{ question }}
+
+{% endif %}Hope everything's going well on your end!
+
+Best,
+
+{{ sender_name }}

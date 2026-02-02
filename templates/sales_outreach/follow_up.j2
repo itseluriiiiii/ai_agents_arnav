@@ -1,0 +1,21 @@
+---
+description: "Sales follow-up email template"
+subject_template: "Following up: {{ subject }}"
+variables: ["subject", "recipient_name", "previous_context", "follow_up_reason", "additional_value", "question", "sender_name", "company_name"]
+tags: ["sales", "follow-up", "business"]
+---
+
+Hi {{ recipient_name }},
+
+Following up on my previous email{% if previous_context %} regarding {{ previous_context }}{% endif %}.
+
+I wanted to {{ follow_up_reason }}{% if additional_value %} and share that {{ additional_value }}{% endif %}.
+
+{% if question %}{{ question }}
+
+{% endif %}Are you available for a quick chat this week?
+
+Best,
+
+{{ sender_name }}
+{{ company_name }}
